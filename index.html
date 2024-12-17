@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOGO Offer</title>
+  <link rel="stylesheet" href="index.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <h2>YAY! It’s BOGO</h2>
+
+    <form id="offerForm">
+      <!-- 1 Unit -->
+      <div class="unit-option" data-price="10">
+        <input type="radio" id="unit1" name="offer" value="10" checked>
+        <label for="unit1">
+          <span>1 Unit</span>
+          <span class="discount">10% Off</span>
+          <span class="price">$10.00 USD</span>
+        </label>
+        <div class="options" id="options1" style="display: none;"></div>
+      </div>
+
+      <!-- 2 Units -->
+      <div class="unit-option most-popular" data-price="18">
+        <input type="radio" id="unit2" name="offer" value="18">
+        <label for="unit2">
+          <span>2 Units</span>
+          <span class="discount">20% Off</span>
+          <span class="price">$18.00 USD</span>
+          <div class="options" id="options2" style="display: none;"></div>
+        </label>
+        <!-- Dropdowns initially hidden -->
+        <div class="options" id="options2" style="display: none;">
+          <div class="dropdown">
+            <label for="size1">Size</label>
+            <select id="size1">
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="dropdown">
+            <label for="color1">Colour</label>
+            <select id="color1">
+              <option>Black</option>
+              <option>Red</option>
+              <option>Blue</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Units -->
+      <div class="unit-option" data-price="24">
+        <input type="radio" id="unit3" name="offer" value="24">
+        <label for="unit3">
+          <span>3 Units</span>
+          <span class="discount">30% Off</span>
+          <span class="price">$24.00 USD</span>
+        </label>
+        <div class="options" id="options3" style="display: none;"></div>
+      </div>
+
+      <!-- Total and Add to Cart -->
+      <div class="footer">
+        <span style="display: flex;" class="free-delivery">Free Delivery</span>
+        Total: <span style="display: flex;" id="totalPrice">$10.00 USD</span>
+        <button type="button" id="addToCart">+ Add to Cart</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
